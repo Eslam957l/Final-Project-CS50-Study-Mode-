@@ -1,8 +1,6 @@
 # Study Mode
-## Video Demo:
-[Watch on YouTube](https://youtu.be/qAvPq9HY8Uw)
-#### Description:
 
+#### Description:
 
 # Study Mode — CS50 Final Project
 
