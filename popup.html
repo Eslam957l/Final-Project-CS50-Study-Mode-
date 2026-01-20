@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Study Mode</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <div class="title">Study Mode</div>
+        <div class="subtitle" id="siteLine">Loading…</div>
+      </div>
+      <div class="pill" id="statusPill">—</div>
+    </header>
+
+    <main class="card">
+      <div class="row">
+        <label class="label">Enabled</label>
+        <label class="switch">
+          <input type="checkbox" id="enabled" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="row">
+        <label class="label">Hide ads</label>
+        <label class="switch">
+          <input type="checkbox" id="hideAds" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="row">
+        <label class="label">Hide comments</label>
+        <label class="switch">
+          <input type="checkbox" id="hideComments" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="row">
+        <label class="label">Study theme</label>
+        <label class="switch">
+          <input type="checkbox" id="themeEnabled" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="row2">
+        <div class="label2">
+          <div>Saturation</div>
+          <div class="value" id="satVal"></div>
+        </div>
+        <input type="range" id="saturation" min="0.3" max="1.3" step="0.05" />
+      </div>
+
+      <div class="row2">
+        <div class="label2">
+          <div>Contrast</div>
+          <div class="value" id="conVal"></div>
+        </div>
+        <input type="range" id="contrast" min="0.8" max="1.4" step="0.05" />
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="row">
+        <label class="label">Use custom settings for this site</label>
+        <label class="switch">
+          <input type="checkbox" id="useSiteOverride" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="resetSite" title="Delete this site's custom settings">
+          Reset site settings
+        </button>
+        <a class="link" href="#" id="openOptions">Options</a>
+      </div>
+
+      <div class="note" id="note"></div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

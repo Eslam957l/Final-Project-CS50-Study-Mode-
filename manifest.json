@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Study Mode (Focus Shield)",
+  "version": "1.0.0",
+  "description": "Reduce distractions on any website: hide common ads/comments patterns, apply a study theme, and save per-site preferences.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Study Mode",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
